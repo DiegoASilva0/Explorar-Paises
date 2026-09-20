@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Explorar País</title>
+  </head>
+  <body>
+    <header>
+      <img src="img/globo_terrestre.jpg" alt="Globo terrestre" />
+
+      <div>
+        <h1>Explorador de Países</h1>
+        <span>Explore os países do mundo</span>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside>
+        <div class="pesquisa">
+          <input type="text" name="pesquisar" id="pesquisarPais" placeholder="Pesquisar país..."/>
+        </div>
+
+        <div id="button-pais">
+          <h2>Continentes</h2>
+
+          <button type="button" class="card-button">Todos</button>
+          <button type="button" class="card-button">África</button>
+          <button type="button" class="card-button">América do Norte</button>
+          <button type="button" class="card-button">América do Sul</button>
+          <button type="button" class="card-button">Ásia</button>
+          <button type="button" class="card-button">Europa</button>
+          <button type="button" class="card-button">Oceania</button>
+        </div>
+
+      </aside>
+
+    <main>
+        <section class="paises">
+            <div id="bandeiras_pais">
+              <div id="bandeiras">
+              
+              </div>
+                  <div class="info_paises">
+                      <h1 id="nomePais"></h1>
+                      <span class="continente"></span>
+                      <p id="info_principais"></p>
+                  </div>
+            </div>
+            
+            <div id="container">
+                <div id="infoPaises">
+                    <div class="card">
+                        População 
+                        <span id="populacao"></span>
+                    </div>
+                    <div class="card">
+                        Capital 
+                        <span id="capital"></span>
+                    </div>
+                    <div class="card">
+                        Moeda 
+                        <span id="moeda"></span>
+                    </div>
+                    <div class="card">
+                        Idioma(s) 
+                        <span id="idioma"></span>
+                    </div>
+                    <div class="card">
+                        Continente 
+                        <span class="continente"></span>
+                    </div>
+                </div>
+            </div>
+
+             <div id="paises">
+              <h2>Paises</h2>
+               <ul>
+                <li id="msg_paises">
+               
+                </li>
+               </ul>
+             </div>
+        </section>
+    </main>
+
+    <div id="msg"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

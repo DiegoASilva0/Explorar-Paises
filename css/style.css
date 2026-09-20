@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* =================
+        HEADER
+================= */
+
+header {
+  display: flex;
+  align-items: center;
+
+  background-color: white;
+  border-bottom: 1px solid black;
+  box-shadow: 1px 1px 8px black;
+
+  padding: 10px;
+}
+
+header > img {
+  width: 70px;
+}
+
+header > div {
+  margin-left: 10px;
+}
+
+header > div > h1 {
+  color: black;
+}
+
+header > div > span {
+  color: black;
+}
+
+/* =================
+        LAYOUT
+================= */
+
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+
+  min-height: calc(100vh - 96px);
+}
+
+/* =================
+        SIDEBAR
+================= */
+
+aside {
+  background-color: white;
+
+  border-right: 1px solid black;
+
+  padding: 20px;
+}
+
+/* =================
+       PESQUISA
+================= */
+
+#pesquisarPais {
+  width: 100%;
+
+  background-color: white;
+
+  border: 1px solid black;
+  border-radius: 10px;
+
+  box-shadow: 1px 1px 5px black;
+
+  padding: 10px;
+
+  color: black;
+}
+
+/* =================
+      CONTINENTES
+================= */
+
+#button-pais {
+  display: grid;
+  gap: 5px;
+
+  margin-top: 20px;
+}
+
+#button-pais > h2 {
+  color: black;
+  margin-bottom: 5px;
+}
+
+/* =================
+       BOTÕES
+================= */
+
+.card-button {
+  width: 100%;
+
+  background-color: white;
+
+  border: 1px solid black;
+  border-radius: 10px;
+
+  box-shadow: 1px 1px 5px black;
+
+  color: black;
+
+  text-align: left;
+
+  padding: 10px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 300ms;
+}
+
+.card-button:hover {
+  background-color: rgba(102, 102, 104, 0.5);
+  translate: 8px;
+}
+
+/* =================
+        MAIN
+================= */
+
+main {
+  min-width: 0;
+
+  margin: 20px;
+
+  background-color: #f5f5f5;
+
+  border: 1px solid black;
+  border-radius: 10px;
+
+  box-shadow: 1px 1px 5px black;
+}
+
+/* =================
+      PAÍS ATUAL
+================= */
+
+#bandeiras_pais {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+
+  margin: 15px;
+}
+
+#bandeiras > img {
+  width: 150px;
+
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.info_paises {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.info_paises > span {
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  font-weight: bold;
+}
+
+#info_principais {
+  max-width: 580px;
+}
+
+/* =================
+      INFORMAÇÕES
+================= */
+
+#container {
+  width: 100%;
+}
+
+#infoPaises {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 10px;
+
+  padding: 15px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  background-color: white;
+
+  border: 1px solid black;
+  border-radius: 10px;
+
+  box-shadow: 1px 1px 5px black;
+
+  padding: 10px;
+
+  font-weight: bold;
+}
+
+.card > span {
+  padding-top: 8px;
+  margin-left: 5px;
+
+  overflow-wrap: break-word;
+}
+
+/* =================
+      LISTA PAÍSES
+================= */
+
+#msg_paises {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+
+  gap: 10px;
+
+  height: 250px;
+
+  overflow-y: auto;
+
+  margin: 10px;
+  padding: 5px;
+}
+
+/* =================
+      CARD PAÍS
+================= */
+
+.card-paises {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 140px;
+
+  padding: 8px;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.card-paises > img {
+  width: 110px;
+  height: 80px;
+
+  object-fit: contain;
+}
+
+/* =================
+        OUTROS
+================= */
+
+ul {
+  list-style: none;
+}
+
+#paises > h2 {
+  margin-left: 20px;
+}
+
+/* ==============
+    TELA MÉDIA
+=================*/
+
+@media (max-width: 1100px) {
+  .layout {
+    grid-template-columns: 230px 1fr;
+  }
+
+  aside {
+    padding: 15px;
+  }
+
+  main {
+    margin: 15px;
+  }
+
+  #infoPaises {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #bandeiras > img {
+    width: 130px;
+  }
+}
+
+/* ===========
+    TABLET
+=============*/
+
+@media (max-width: 850px) {
+  .layout {
+    grid-template-columns: 210px 1fr;
+  }
+
+  header > div > h1 {
+    font-size: 24px;
+  }
+
+  #bandeiras_pais {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .info_paises {
+    align-items: center;
+  }
+
+  #info_principais {
+    max-width: 100%;
+  }
+
+  #infoPaises {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #msg_paises {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  }
+}
+
+/* =============
+    CELULAR
+===============*/
+
+@media (max-width: 650px) {
+  /* HEADER */
+
+  header > img {
+    width: 55px;
+  }
+
+  header > div {
+    margin-left: 8px;
+  }
+
+  header > div > h1 {
+    font-size: 21px;
+  }
+
+  header > div > span {
+    font-size: 13px;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    width: 100%;
+
+    border-right: none;
+    border-bottom: 1px solid black;
+
+    padding: 15px;
+  }
+
+  main {
+    margin: 10px;
+  }
+
+  #bandeiras_pais {
+    grid-template-columns: 1fr;
+
+    justify-items: center;
+  }
+
+  #bandeiras > img {
+    width: 160px;
+  }
+
+  .info_paises {
+    margin-top: 5px;
+  }
+
+  #infoPaises {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 8px;
+
+    padding: 10px;
+  }
+
+  .card {
+    padding: 8px;
+  }
+
+  #msg_paises {
+    grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+
+    height: 300px;
+  }
+
+  .card-paises {
+    height: 135px;
+  }
+
+  .card-paises > img {
+    width: 100px;
+    height: 75px;
+  }
+}
+
+/* ======================
+    CELULAR PEQUENO
+======================== */
+
+@media (max-width: 400px) {
+  header > img {
+    width: 45px;
+  }
+
+  header > div > h1 {
+    font-size: 18px;
+  }
+
+  header > div > span {
+    font-size: 11px;
+  }
+
+  #infoPaises {
+    grid-template-columns: 1fr;
+  }
+
+  #msg_paises {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-paises {
+    height: 130px;
+  }
+}
